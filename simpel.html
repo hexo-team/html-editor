@@ -1,0 +1,9 @@
+<a href='#' id="link">öffnen</a>
+
+<script>
+var input = prompt("Please enter HTML Code", "");
+
+let blob = new Blob([ input ], {type: 'text/html'});
+
+link.href = URL.createObjectURL(blob);
+</script>
