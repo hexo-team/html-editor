@@ -1,0 +1,13 @@
+<textarea id="input">Snakes. Why'd it have to be snakes?</textarea>
+<a onclick="createBlob()" href="javascript:void(0)" id="link">öffnen</a>
+
+<script>
+function createBlob() { 
+var input = document.getElementById("input");
+
+let blob = new Blob([ input.value ], {type: 'text/html'});
+
+link.href = URL.createObjectURL(blob);
+} 
+
+</script>
