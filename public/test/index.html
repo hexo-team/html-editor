@@ -1,0 +1,15 @@
+<textarea id="input">Snakes. Why'd it have to be snakes?</textarea>
+<a onclick="createBlob()" href="javascript:void(0)" id="link">öffnen</a>
+<iframe id="editor" src="">
+</iframe>
+
+<script>
+function createBlob() { 
+var input = document.getElementById("input");
+
+let blob = new Blob([ input.value ], {type: 'text/html'});
+
+editor.src = URL.createObjectURL(blob);
+} 
+
+</script>
