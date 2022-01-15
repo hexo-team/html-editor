@@ -1,6 +1,6 @@
 <textarea id="input">write your code here</textarea>
 <button onclick="iframeupdate()" id="update">UpDate</button>
-<a href="" id="open">open in new tab</a>
+<a href="" id="open">open und new Tab</a>
 
 <hr>
 
@@ -10,10 +10,10 @@
 <script>
 function iframeupdate() { 
 var input = document.getElementById("input");
-let writtencode = new Blob([ input.value ], {type: 'text/html'});
+let blob = new Blob([ input.value ], {type: 'text/html'});
   
-editor.src = URL.createObjectURL(writtencode);
-open.href = URL.createObjectURL(writtencode);
+editor.src = URL.createObjectURL(blob);
+open.href = URL.createObjectURL(blob);
 } 
 
 </script>
