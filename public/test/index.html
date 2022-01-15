@@ -9,6 +9,7 @@
 
 <script>
 function iframeupdate() { 
+URL.revokeObjectURL(link.href);
 var input = document.getElementById("input");
 let writtencode = new Blob([ input.value ], {type: 'text/html'});
   
