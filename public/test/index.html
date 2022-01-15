@@ -1,6 +1,6 @@
-<textarea id="input">write your code here</textarea>
-<button onclick="iframeupdate()" id="update">UpDate</button>
-<a href="" id="open">open und new Tab</a>
+<textarea id="input">Snakes. Why'd it have to be snakes?</textarea>
+<button onclick="iframeupdate()" id="runbutton">öffnen</button>
+<a href="" id="link">öffnen</a>
 
 <hr>
 
@@ -13,7 +13,7 @@ var input = document.getElementById("input");
 let blob = new Blob([ input.value ], {type: 'text/html'});
   
 editor.src = URL.createObjectURL(blob);
-open.href = URL.createObjectURL(blob);
+link.href = URL.createObjectURL(blob);
 } 
 
 </script>
