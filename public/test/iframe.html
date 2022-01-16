@@ -5,13 +5,18 @@
 <script>
 function codeupdate() { 
 
-URL.revokeObjectURL(iframeurl);
+// create a new div element
+const iframe = document.createElement("iframe");
+// and give it some content
 
 var input = document.getElementById("input");
 let writtencode = new Blob([ input.value ], {type: 'text/html'});
-  
-let iframeurl = URL.createObjectURL(writtencode);
-input.insertAdjacentHTML('afterend', '<iframe id="iframe" src=' + iframeurl + ">");
+var iframeurl = URL.createObjectURL(writtencode);
+iframe.src = iframeurl
 
-} 
+// add the newly created element and its content into the DOM
+const currentDiv = document.getElementById("editor");
+document.body.appendChild(iframe, currentDiv);
+}
+
 </script>
