@@ -1,14 +1,16 @@
 <p>Somewhere in the page...</p>
 
+<textarea oninput="codeupdate()" id="input" placeholder="write cour code here"></textarea>
+
 <div id="view">
 </div>
-
-<textarea oninput="codeupdate()" id="input" placeholder="write cour code here"></textarea>
 
 <a onclick="iframeupdate()" href="javascript:void(0)" id="link">open in new tab</a>
 
 <script>
 function codeupdate() { 
+  
+  URL.revokeObjectURL(link.href);
   
   // create a new div element
   const newDiv = document.createElement("div");
@@ -21,8 +23,6 @@ function codeupdate() {
   var iframeurl = URL.createObjectURL(writtencode);
   link.href = iframeurl
   iframe.src = iframeurl
-
-  
   
   // add the text node to the newly created div
   newDiv.appendChild(iframe);
@@ -30,11 +30,6 @@ function codeupdate() {
   // add the newly created element and its content into the DOM
   const currentDiv = document.getElementById("view");
   document.body.replaceChild(newDiv, currentDiv);
-
-
-
-
-// add the newly created element and its content into the DOM
 
 }
 </script>
