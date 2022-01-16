@@ -13,8 +13,8 @@ function codeupdate() {
   URL.revokeObjectURL(link.href);
   
   // create a new div element
-  const newDiv = document.createElement("div");
-  newDiv.id = "view"
+  const newView = document.createElement("div");
+  newView.id = "view"
 
   // and give it some content
   const iframe = document.createElement("iframe");
@@ -23,13 +23,14 @@ function codeupdate() {
   var iframeurl = URL.createObjectURL(writtencode);
   link.href = iframeurl
   iframe.src = iframeurl
+  iframe.id = "currentSite"
   
   // add the text node to the newly created div
-  newDiv.appendChild(iframe);
+  newView.appendChild(iframe);
 
   // add the newly created element and its content into the DOM
-  const currentDiv = document.getElementById("view");
-  document.body.replaceChild(newDiv, currentDiv);
+  const currentView = document.getElementById("view");
+  document.body.replaceChild(newView, currentView);
 
 }
 </script>
