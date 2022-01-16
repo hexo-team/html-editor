@@ -1,5 +1,8 @@
 <p>Somewhere in the page...</p>
 
+<div id="view">
+</div>
+
 <textarea oninput="codeupdate()" id="input" placeholder="write cour code here"></textarea>
 
 <script>
@@ -14,9 +17,13 @@ let writtencode = new Blob([ input.value ], {type: 'text/html'});
 var iframeurl = URL.createObjectURL(writtencode);
 iframe.src = iframeurl
 
+
 // add the newly created element and its content into the DOM
-const currentDiv = document.getElementById("editor");
-document.body.appendChild(iframe, currentDiv);
+const view = document.getElementById("view");
+  
+const newView = view.appendChild(iframe);
+
+document.body.replaceChild(iframe, newView);
 }
 
 </script>
