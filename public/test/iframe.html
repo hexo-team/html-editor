@@ -9,7 +9,7 @@ var input = document.getElementById("input");
 let writtencode = new Blob([ input.value ], {type: 'text/html'});
   
 let iframeurl = URL.createObjectURL(writtencode);
-input.insertAdjacentHTML('afterend', "<iframe src=" + iframeurl + ">");
+input.insertAdjacentHTML('afterend', '<iframe id="iframe" src=' + iframeurl + ">");
 
 } 
 </script>
