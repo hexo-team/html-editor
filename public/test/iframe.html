@@ -8,22 +8,23 @@
 <script>
 function codeupdate() { 
 
-// create a new div element
-const iframe = document.createElement("iframe");
-// and give it some content
+  // create a new div element
+  const newDiv = document.createElement("div");
+  newDiv.id = "view"
 
-var input = document.getElementById("input");
-let writtencode = new Blob([ input.value ], {type: 'text/html'});
-var iframeurl = URL.createObjectURL(writtencode);
-iframe.src = iframeurl
-
-
-// add the newly created element and its content into the DOM
-const view = document.getElementById("view");
+  // and give it some content
+  const iframe = document.createElement("iframe");
+  var input = document.getElementById("input");
+  let writtencode = new Blob([ input.value ], {type: 'text/html'});
+  var iframeurl = URL.createObjectURL(writtencode);
+  iframe.src = iframeurl
   
-const newView = view.appendChild(iframe);
+  // add the text node to the newly created div
+  newDiv.appendChild(iframe);
 
-document.body.replaceChild(iframe, newView);
+  // add the newly created element and its content into the DOM
+  const currentDiv = document.getElementById("view");
+  document.body.replaceChild(newDiv, currentDiv);
+
 }
-
 </script>
