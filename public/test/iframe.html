@@ -1,0 +1,15 @@
+<p>Somewhere in the page...</p>
+
+<textarea oninput="codeupdate()" id="input" placeholder="write cour code here"></textarea>
+
+<script>
+  function codeupdate() { 
+
+var input = document.getElementById("input");
+let writtencode = new Blob([ input.value ], {type: 'text/html'});
+  
+let iframeurl = URL.createObjectURL(writtencode);
+input.insertAdjacentHTML('afterend', "<iframe src=" + iframeurl + ">");
+
+} 
+</script>
