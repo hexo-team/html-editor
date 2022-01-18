@@ -1,4 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - A Pen by Flip Tip</title>
+  
 
+</head>
+<body>
+<!-- partial:index.partial.html -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -6,14 +15,14 @@
 </head>
 
 <body>
-<p>Somewhere in the page...</p>
 
-<textarea oninput="codeupdate()" id="input" placeholder="write cour code here"></textarea>
+<textarea style="width:98%;hight:40%;" oninput="codeupdate()" id="input" placeholder="write cour code here"></textarea>
+  
+  <a href="javascript:void(0)" id="link">open in new tab</a>
 
-<div id="view">
+<div style="width:98%;hight:40%;" id="view">
+  <iframe style="width:100%;hight%100%;" id="currentSite"></iframe>
 </div>
-
-<a href="javascript:void(0)" id="link">open in new tab</a>
 
 <script>
 function codeupdate() { 
@@ -23,6 +32,7 @@ function codeupdate() {
   // create a new div element
   const newView = document.createElement("div");
   newView.id = "view"
+  newView.style = "width:100%;"
 
   // and give it some content
   const iframe = document.createElement("iframe");
@@ -32,6 +42,7 @@ function codeupdate() {
   link.href = iframeurl
   iframe.src = iframeurl
   iframe.id = "currentSite"
+  iframe.style = "width:100%;"
   
   // add the text node to the newly created div
   newView.appendChild(iframe);
@@ -42,5 +53,9 @@ function codeupdate() {
 
 }
 </script>
+</body>
+</html>
+<!-- partial -->
+  
 </body>
 </html>
