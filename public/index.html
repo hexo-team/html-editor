@@ -8,7 +8,8 @@
 
 <body>  
 <a href="javascript:void(0)" id="link">open in new tab</a>
-
+<button onclick="clear()">reset written code</button>
+  
 <div style="" id="view">
   <iframe style="width:95vw;height:50vh;" id="currentSite"></iframe>
 </div>
@@ -57,6 +58,13 @@ function codeupdate() {
   document.body.replaceChild(newView, currentView);
 
 }
+
+  function clear() {
+    var check = confirm('Wollen Sie den geschriebenen Code löchen? '); 
+	if (check == true) {
+		location.reload();
+	}
+  }
 </script>
 </body>
 </html>
