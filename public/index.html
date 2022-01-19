@@ -8,12 +8,12 @@
 
 <body>
 
-<textarea style="width:98%;hight:40%;" oninput="codeupdate()" id="input" placeholder="write cour code here"></textarea>
+<textarea style="width:98vw;height:50vh;" oninput="codeupdate()" id="input" placeholder="write cour code here"></textarea>
   
   <a href="javascript:void(0)" id="link">open in new tab</a>
 
-<div style="width:98%;hight:40%;" id="view">
-  <iframe style="width:100%;hight%100%;" id="currentSite"></iframe>
+<div style="" id="view">
+  <iframe style="width:98vw;hight:45vh;" id="currentSite"></iframe>
 </div>
 
 <script>
@@ -24,7 +24,7 @@ function codeupdate() {
   // create a new div element
   const newView = document.createElement("div");
   newView.id = "view"
-  newView.style = "width:98%;hight:40%"
+
 
   // and give it some content
   const iframe = document.createElement("iframe");
@@ -34,7 +34,7 @@ function codeupdate() {
   link.href = iframeurl
   iframe.src = iframeurl
   iframe.id = "currentSite"
-  iframe.style = "width:100%;hight%100%;"
+  iframe.style = "width:98vw;hight4:0vh;"
   
   // add the text node to the newly created div
   newView.appendChild(iframe);
