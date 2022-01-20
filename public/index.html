@@ -4,12 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-    <link rel="stylesheet" href="prism.css">
-    <link rel="stylesheet" href="editor.css">
-    <script src="prism.js"></script>
-    <script src="editor.js"></script>
-
 </head>
 
 <body>  
@@ -24,9 +18,19 @@
   <iframe style="width:95vw;height:50vh;" id="currentSite"></iframe>
 </div>
 
-<pre><code style="width:95vw;height:48vh;" oninput="codeupdate()" id="input" class="language-js language-markup language-css editable">
-</code></pre>
+<textarea style="width:95vw;height:48vh;" oninput="codeupdate()" id="input" placeholder="write cour code here">
 
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+
+  </body>
+</html>
+</textarea>
 
 <script>
 function codeupdate() { 
@@ -41,7 +45,7 @@ function codeupdate() {
   // and give it some content
   const iframe = document.createElement("iframe");
   var input = document.getElementById("input");
-  let writtencode = new Blob([ input.innerHTML ], {type: 'text/html'});
+  let writtencode = new Blob([ input.value ], {type: 'text/html'});
   var iframeurl = URL.createObjectURL(writtencode);
   link.href = iframeurl
   iframe.src = iframeurl
