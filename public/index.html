@@ -5,8 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<link rel="stylesheet" href="prism.css">
-<script src="prism.js"></script>
+    <link rel="stylesheet" href="prism.css">
+    <link rel="stylesheet" href="editor.css">
+    <script src="prism.js"></script>
+    <script src="editor.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/prismjs@1.26.0/plugins/autoloader/prism-autoloader.min.js"></script>
 
@@ -24,19 +26,11 @@
   <iframe style="width:95vw;height:50vh;" id="currentSite"></iframe>
 </div>
 
-<textarea style="width:95vw;height:48vh;" oninput="codeupdate()" id="input" placeholder="write cour code here">
+<pre><code style="width:95vw;height:48vh;" oninput="codeupdate()" id="input" class="language-js editable">
 
-<!DOCTYPE html>
-<html lang="de">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  </head>
-  <body>
 
-  </body>
-</html>
-</textarea>
+</code></pre>
+
 
 <script>
 function codeupdate() { 
