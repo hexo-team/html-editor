@@ -8,7 +8,7 @@
 
 <body>  
 <a href="javascript:void(0)" id="link">open in new tab</a>
-<button type="button" onClick="clear()">Close</button>
+<button type="button" onClick="refreshPage()">reset Editor</button>
 
  
 <div style="" id="view">
@@ -69,12 +69,14 @@ function codeupdate() {
 </script>
 
 <script>
-function clear(){
+function refreshPage(){
 
 var check = confirm('Wollen Sie den geschriebenen wirklich Code löchen? '); 
 	if (check == true) {
+
     window.location.reload();
-} }
+} 
+}
 </script>
 
 </body>
