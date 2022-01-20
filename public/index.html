@@ -41,7 +41,7 @@ function codeupdate() {
   // and give it some content
   const iframe = document.createElement("iframe");
   var input = document.getElementById("input");
-  let writtencode = new Blob([ input.value ], {type: 'text/html'});
+  let writtencode = new Blob([ input.innerHTML ], {type: 'text/html'});
   var iframeurl = URL.createObjectURL(writtencode);
   link.href = iframeurl
   iframe.src = iframeurl
