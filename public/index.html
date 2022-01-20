@@ -47,7 +47,7 @@ function codeupdate() {
 }
 
   function clear() {
-    var check = confirm('Wollen Sie den geschriebenen Code löchen? '); 
+    var check = confirm('code wiedererstellen?'); 
 	if (check == true) {
 		location.reload();
 	}
@@ -57,11 +57,14 @@ function codeupdate() {
 <script>
 function refreshPage(){
 
-var check = confirm('Wollen Sie den geschriebenen wirklich Code löchen? '); 
-	if (check == true) {
+var input = document.getElementById("input");
+var work = localStorage.getItem('work');
+console.log(work);
 
-    window.location.reload();
-} 
+input.value = work;
+codeupdate();
+
+
 }
 </script>
 	
@@ -70,12 +73,6 @@ function save(){
 
 var input = document.getElementById("input");
 
-if (input == null) {
-
-    var work = storage.getItem("work");
-input.innerHTML = work;
-
-} 
 
   localStorage.setItem('work', input.value);
   
