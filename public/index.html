@@ -15,21 +15,7 @@
   <iframe style="width:95vw;height:50vh;" id="currentSite"></iframe>
 </div>
 
-<textarea style="width:95vw;height:48vh;" oninput="codeupdate()" id="input" placeholder="write cour code here">
-
-<!DOCTYPE html>
-<html lang="de">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Titel</title>
-  </head>
-  <body>
-
-  </body>
-</html>
-
-</textarea>
+<textarea style="width:95vw;height:48vh;" oninput="codeupdate()" id="input" placeholder="write cour code here"></textarea>
 
 <script>
 function codeupdate() { 
@@ -82,7 +68,15 @@ var check = confirm('Wollen Sie den geschriebenen wirklich Code löchen? ');
 <script>
 function save(){
 
-  var input = document.getElementById("input");
+var input = document.getElementById("input");
+
+if (input == null) {
+
+    var work = storage.getItem("work");
+input.innerHTML = work;
+
+} 
+
   localStorage.setItem('work', input.value);
   
 }
