@@ -9,7 +9,7 @@
 <body>  
 <a href="javascript:void(0)" id="link">open in new tab</a>
 <button type="button" onClick="refreshPage()">reset Editor</button>
-
+<button type="button" onClick="save()">save</button>
  
 <div style="" id="view">
   <iframe style="width:95vw;height:50vh;" id="currentSite"></iframe>
@@ -76,6 +76,15 @@ var check = confirm('Wollen Sie den geschriebenen wirklich Code löchen? ');
 
     window.location.reload();
 } 
+}
+</script>
+	
+<script>
+function save(){
+
+  var input = document.getElementById("input");
+  localStorage.setItem('work', input.value);
+  
 }
 </script>
 
