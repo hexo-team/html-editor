@@ -1,0 +1,43 @@
+/* only for the demo */
+html {
+    font-size: 16px;
+}
+
+pre {
+    background: #eee;
+    border: 1px solid #ddd;
+    padding: 1em;
+}
+
+code:focus {
+    outline: none;
+}
+
+
+/* realtime editing */
+.realtime-editing-wrapper {
+    position: relative;
+    overflow: auto;     /* this enables max-height */
+}
+
+.realtime-editing-wrapper pre {
+    margin: 0;          /* they must have no margins */
+}
+
+.realtime-editing-shadow {
+    position: static;   /* the height of the wrapper div depends on the shadow pre */
+}
+
+.realtime-editing-editable {
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+    caret-color: #f00;
+ 
+    position: absolute; /* floats above the shadow pre */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
