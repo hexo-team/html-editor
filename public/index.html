@@ -54,29 +54,7 @@ function codeupdate() {
   }
 </script>
 
-<script>
-function restore(){
-
-var input = document.getElementById("input");
-var work = localStorage.getItem('work');
-console.log(work);
-
-input.value = work;
-codeupdate();
-
-
-}
-</script>
-	
-<script>
-function save(){
-
-var input = document.getElementById("input");
-
-
-  localStorage.setItem('work', input.value);
-  
-}
+<script src="./src/save-restore.js">
 </script>
 
 </body>
