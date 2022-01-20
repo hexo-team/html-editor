@@ -8,7 +8,7 @@
 
 <body>  
 <a href="javascript:void(0)" id="link">open in new tab</a>
-<button type="button" onClick="refreshPage()">reset Editor</button>
+<button type="button" onClick="restore()">restore Editor</button>
 <button type="button" onClick="save()">save</button>
  
 <div style="" id="view">
@@ -55,7 +55,7 @@ function codeupdate() {
 </script>
 
 <script>
-function refreshPage(){
+function restore(){
 
 var input = document.getElementById("input");
 var work = localStorage.getItem('work');
