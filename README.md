@@ -5,7 +5,7 @@
 
 simple full localy HTML, JS, CSS editor
 
-[![discuss future development](https://img.shields.io/badge/further%20development-Discuss-blue?logo=github)](https://github.com/hexo-team/html-editor/discussions/3?sort=top)
+[![discuss future development](https://img.shields.io/badge/future%20development-Discuss-blue?logo=github)](https://github.com/hexo-team/html-editor/discussions/3?sort=top)
 [![index.html history](https://img.shields.io/badge/History-index.html-lightgrey?logo=github)](https://github.com/hexo-team/html-editor/blame/main/public/short.html)
   <task-lists disabled="" sortable="">
   <table class="d-block js-translation-source" data-paste-markdown-skip="">
