@@ -33,7 +33,7 @@
 </textarea>
 
 <script>
-function codeupdate() { 
+setTimeout(function codeupdate() { 
   
   URL.revokeObjectURL(link.href);
   
@@ -59,7 +59,7 @@ function codeupdate() {
   const currentView = document.getElementById("view");
   document.body.replaceChild(newView, currentView);
 
-}
+}, 500);
 
   function clear() {
     var check = confirm('code wiedererstellen?'); 
